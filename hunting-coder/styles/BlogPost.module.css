@@ -1,0 +1,15 @@
+
+.main {
+    min-height: 100vh;
+    padding: 2rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 12rem;
+  }
+
+.blogItem{
+    color: aquamarine;
+}
