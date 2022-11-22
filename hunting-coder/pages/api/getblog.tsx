@@ -4,11 +4,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import * as fs from "fs"
 
-type Data = {
-  error: string
-}
+type Data = {}
 
-export default function handler(
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
@@ -19,9 +17,29 @@ export default function handler(
 //     console.log(req.query.slug);
 //     res.status(200).json(JSON.parse(data));
 //   })
-  fs.readdir(`blogdata`, (err, data)=>{
-    console.log(data);
-    res.status(200).json(data);
-  })
+
+  // fs.promises.readdir(`blogdata`, (err, data)=>{
+  //   console.log(data);
+  //   var all_blogs: any = [];
+  //   data.forEach((item)=>{
+    //       console.log(item);
+    //       fs.readFile(('getblog/' + item), (result)=>{
+      //           all_blogs.push(result);
+      //       })
+      //   })
+      //   res.status(200).json(all_blogs);
+      // })
+      
+  var all_blogs: any = [];
+  var data = await fs.promises.readdir(`blogdata`)
+  var myfile;
+  for (let index = 0; index < data.length; index++) {
+    const item = data[index];
+    console.log(item);
+    myfile = await fs.promises.readFile((`blogdata/`+ item), "utf-8");
+    all_blogs.push(JSON.parse(myfile));
+    // console.log(myfile);
+  }
+  res.status(200).json(all_blogs);
 }
 
