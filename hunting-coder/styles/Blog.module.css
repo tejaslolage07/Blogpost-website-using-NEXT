@@ -16,3 +16,7 @@
 .blogItem{
 
 }
+
+.blogItemPara{
+  max-width: 65vw;
+}
