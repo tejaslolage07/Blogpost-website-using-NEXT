@@ -1,18 +1,17 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import React from "react";
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <style jsx>
         {`
-          h2{
+          h2 {
             font-size: 50px;
             margin: 15px 0px 25px 0px;
           }
-          h3{
+          h3 {
             font-size: 30px;
           }
         `}
@@ -23,36 +22,38 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      
-
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Hunting coder
-        </h1>
+        <h1 className={styles.title}>Hunting coder</h1>
 
         <div className={styles.imagewrapper}>
-          <Image className={styles.homeimg} alt="" src="/homeImg.webp" width={174} height={116} />
+          {/* <Image
+            className={styles.homeimg}
+            alt=""
+            src="/homeImg.webp"
+            width={174}
+            height={116}
+          /> */}
         </div>
         <p className={styles.description}>
           A blog for hunting coders by a hunting coder.
         </p>
 
-      <div className="blogs">
-        <h2>Popular blogs:</h2>
-        <div className="blogItem">
-          <h3>How to learn JavaScript in 2022?</h3>
-          <p>JavaScript is widely used for designing logic for the web.</p>
+        <div className="blogs">
+          <h2>Popular blogs:</h2>
+          <div className="blogItem">
+            <h3>How to learn JavaScript in 2022?</h3>
+            <p>JavaScript is widely used for designing logic for the web.</p>
+          </div>
+          <div className="blogItem">
+            <h3>How to learn JavaScript in 2022?</h3>
+            <p>JavaScript is widely used for designing logic for the web.</p>
+          </div>
+          <div className="blogItem">
+            <h3>How to learn JavaScript in 2022?</h3>
+            <p>JavaScript is widely used for designing logic for the web.</p>
+          </div>
         </div>
-        <div className="blogItem">
-          <h3>How to learn JavaScript in 2022?</h3>
-          <p>JavaScript is widely used for designing logic for the web.</p>
-        </div>
-        <div className="blogItem">
-          <h3>How to learn JavaScript in 2022?</h3>
-          <p>JavaScript is widely used for designing logic for the web.</p>
-        </div>
-      </div>
       </main>
     </div>
-  )
+  );
 }
