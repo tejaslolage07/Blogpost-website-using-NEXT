@@ -30,7 +30,7 @@ const Blog = (props: any) => {
                 <h2>{blogItem.title}</h2>
               </Link>
               <p className={styles.blogItemPara}>
-                {blogItem.content.substr(0, 200)}...
+                {blogItem.metadesc.substr(0, 200)}...
               </p>
             </div>
           );
