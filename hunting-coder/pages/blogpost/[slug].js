@@ -5,6 +5,10 @@ import styles from "../../styles/BlogPost.module.css";
 // The challenge is the following steps:
 // 1. To find the file according to the Slug request.
 // 2. Populate them inside the page.
+
+// Typescript requires the function name to start with capital letters. But then, the file name should also have Slug and not slug.\
+// Same goes for 'Slug' anywhere in the file.
+
 const Slug = () => {
     const [blog, setBlog] = useState();
     const router = useRouter();
@@ -13,10 +17,10 @@ const Slug = () => {
         const { Slug } = router.query;
         fetch(`http://localhost:3000/api/getblog?slug=${Slug}`).then((a) => {
             return a.json();
-      })
-      .then((parsed) => {
-        setBlog(parsed);
-      });
+        })
+        .then((parsed) => {
+            setBlog(parsed);
+        });
     }, [router.isReady]);
 
     return (
