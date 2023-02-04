@@ -35,7 +35,7 @@ export default async function handler(
   var myfile;
   for (let index = 0; index < data.length; index++) {
     const item = data[index];
-    console.log(item);
+    // console.log(item);
     myfile = await fs.promises.readFile((`blogdata/`+ item), "utf-8");
     all_blogs.push(JSON.parse(myfile));
     // console.log(myfile);
