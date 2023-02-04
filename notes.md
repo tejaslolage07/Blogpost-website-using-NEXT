@@ -6,3 +6,6 @@ In React, the content is populated using JavaScript and driven through the API. 
 2. Static Site Generation is the method which is used when static data is to be served to the client. This can be effectively done using CDNs which can deliver data very fast. In this method, the front-end bundle of the whole site is converted into a static site. The server will deliver the whole site and its front-end to the client and then its work is done. This is Static Site Generation. One Major drawback of Static Site Generation is that once the static site is generated and deployed, the content will not change again. The CDNs and browser can cache the data and make the content delivery very fast, but in return, if any part of the site needs to be changed, without redeployment, the changes will not be visible.
 
 For server-side-rendering, getServerSideProps() function is used. The page whose HTML did not contain the data which is shown on the screen after visiting the website can now be seen after using Server-side-rendering.
+
+# Parsing HTML from JSON in react.js/next.js:
+If we want the HTML from our JSON to be rendered and not get outputted as source code to the screen, we can make use of the function dangerouslySetHTML
