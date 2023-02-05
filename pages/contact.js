@@ -52,52 +52,28 @@ const Contact = () => {
           <label htmlFor="name" className={styles.formlabel}>
             Enter your name
           </label>
-          <input
-            htmlFor="name"
-            value={name}
-            onChange={handleChange}
-            name="name"
-            id="name"
-          />
+          <input className={styles.input} htmlFor="name" value={name} onChange={handleChange} name="name" id="name" required />
         </div>
-        <div className="mb-3">
+        <div className={styles.mb3}>
           <label htmlFor="phone" className={styles.formlabel}>
             Phone number
           </label>
-          <input htmlFor="phone"
-            value={phone}
-            onChange={handleChange}
-            name="phone"
-            id="phone"
-          />
+          <input className={styles.input} htmlFor="phone" value={phone} onChange={handleChange} name="phone" id="phone" required />
         </div>
-        <div className="mb-3">
+        <div className={styles.mb3}>
           <label htmlFor="email" className={styles.formlabel}>
             Email address
           </label>
-          <input
-            htmlFor="email"
-            value={email}
-            onChange={handleChange}
-            name="email"
-            id="email"
-          />
-          <div id="emailHelp" className="form-text">
-            Psst! we won&#x27;t share your phone/email with anyone else.
+          <input className={styles.input} style={{ margin: "0px" }} htmlFor="email" value={email} onChange={handleChange} name="email" id="email" required />
+          <div id="emailHelp" className={styles.dilasa}>
+            Psst! We won&#x27;t share your phone/email with anyone else.
           </div>
           {/* &#x27; is the character sequence for apostrophe or single quote (') */}
         </div>
-        <div className="mb-3">
-          <textarea
-            className="form-control"
-            onChange={handleChange}
-            value={desc}
-            placeholder="Elaborate your concern"
-            id="desc"
-            name="desc"
-          ></textarea>
+        <div className={styles.mb3}>
+          <textarea className={styles.textarea} onChange={handleChange} value={desc} placeholder="Elaborate your concern" id="desc" name="desc" required ></textarea>
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className={styles.btn}>
           Submit
         </button>
       </form>
