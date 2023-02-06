@@ -187,4 +187,14 @@ margin: auto;
   /* margin-top: 3px; */
 }
 
-.buttonwrapper{}
+@media only screen and (max-width: 600px) {
+  .mainNav ul li{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    list-style: none;
+    text-decoration: none;
+    font-size: larger;
+    margin: 0px 6px;
+    color: black;
+  }
+}
