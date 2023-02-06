@@ -6,3 +6,11 @@
     margin: 40px auto auto auto;
     text-align: center;
 }
+
+
+@media only screen and (max-width: 600px) {
+    .container{
+        max-width: 90vw;
+        margin: auto;
+    }
+}
