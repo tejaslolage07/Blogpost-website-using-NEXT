@@ -28,7 +28,8 @@ export default async function handler(
   // })
 
   var data = await fs.promises.readdir(`blogdata`);
-  data = data.slice(0, parseInt(req.query.count));
+  let c: string = req.query.count as string;
+  data = data.slice(0, parseInt(c));
   var all_blogs: any = [];
   var myfile;
   for (let index = 0; index < data.length; index++) {
