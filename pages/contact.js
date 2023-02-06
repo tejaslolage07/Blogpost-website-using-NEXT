@@ -12,7 +12,7 @@ const Contact = () => {
 
     const data = { name, phone, email, desc };
 
-    fetch("http://localhost:3000/api/postcontact/", {
+    fetch("/api/postcontact/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
