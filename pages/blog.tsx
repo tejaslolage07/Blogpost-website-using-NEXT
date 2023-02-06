@@ -3,13 +3,21 @@ import styles from "../styles/Blog.module.css";
 import Link from "next/link";
 import * as fs from "fs";
 import InfiniteScroll from "react-infinite-scroll-component";
+// import Home from ".";
+
+// Home.getInitialProps = async(context) => {
+//    const { req, query, res, asPath, pathname } = context;
+//    if (req) {
+//       let host = req.headers.host // will give you localhost:3000
+//      }
+//   }
 
 const Blog = (props: any, all_count: any) => {
   const [blogs, setBlogs] = useState(props.all_blogs);
   const [count, setCount] = useState(2);
 
   const fetchData = async () => {
-    let d = await fetch(`http://localhost:3000/api/blogs/?count=${count + 2}`);
+    let d = await fetch(`/api/blogs/?count=${count + 2}`);
     setCount(count + 2);
     let data = await d.json();
     setBlogs(data);

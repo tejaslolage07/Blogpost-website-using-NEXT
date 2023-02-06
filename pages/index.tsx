@@ -33,7 +33,7 @@ export default function Home() {
               ipsum dolor sit amet consectetur adipisicing elit. Rerum, sit?
             </p>
             <div className={styles.buttonwrapper}>
-              <Link href={"http://localhost:3000/blog"}>
+              <Link href={"/blog"}>
                 <button className={styles.btn}>Read more</button>
               </Link>
             </div>
@@ -45,7 +45,7 @@ export default function Home() {
               ipsum dolor sit amet consectetur adipisicing elit. Tenetur ullam.
             </p>
             <div className={styles.buttonwrapper}>
-              <Link href={"http://localhost:3000/blog"}>
+              <Link href={"/blog"}>
                 <button className={styles.btn}>Read more</button>
               </Link>
             </div>
@@ -57,7 +57,7 @@ export default function Home() {
               ipsum dolor sit amet consectetur adipisicing elit. Iure nesciunt.
             </p>
             <div className={styles.buttonwrapper}>
-              <Link href={"http://localhost:3000/blog"}>
+              <Link href={"/blog"}>
                 <button className={styles.btn}>Read more</button>
               </Link>
             </div>
