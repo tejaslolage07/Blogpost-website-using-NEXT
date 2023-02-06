@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import React from "react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -32,7 +33,9 @@ export default function Home() {
               ipsum dolor sit amet consectetur adipisicing elit. Rerum, sit?
             </p>
             <div className={styles.buttonwrapper}>
-              <button className={styles.btn}>Read more</button>
+              <Link href={"http://localhost:3000/blog"}>
+                <button className={styles.btn}>Read more</button>
+              </Link>
             </div>
           </div>
           <div>
@@ -42,7 +45,9 @@ export default function Home() {
               ipsum dolor sit amet consectetur adipisicing elit. Tenetur ullam.
             </p>
             <div className={styles.buttonwrapper}>
-              <button className={styles.btn}>Read more</button>
+              <Link href={"http://localhost:3000/blog"}>
+                <button className={styles.btn}>Read more</button>
+              </Link>
             </div>
           </div>
           <div>
@@ -52,7 +57,9 @@ export default function Home() {
               ipsum dolor sit amet consectetur adipisicing elit. Iure nesciunt.
             </p>
             <div className={styles.buttonwrapper}>
-              <button className={styles.btn}>Read more</button>
+              <Link href={"http://localhost:3000/blog"}>
+                <button className={styles.btn}>Read more</button>
+              </Link>
             </div>
           </div>
         </div>
