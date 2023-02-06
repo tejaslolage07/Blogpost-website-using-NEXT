@@ -9,7 +9,6 @@ const Contact = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(name, phone, email, desc);
 
     const data = { name, phone, email, desc };
 
@@ -19,8 +18,7 @@ const Contact = () => {
       body: JSON.stringify(data),
     })
       .then((response) => response.text())
-      .then((data) => {
-        console.log("Success:", data);
+      .then(() => {
         alert("Email sent successfully");
         setname("");
         setemail("");
