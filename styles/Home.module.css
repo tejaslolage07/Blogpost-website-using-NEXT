@@ -137,7 +137,6 @@
   display: flex;
   justify-content: center;
   text-decoration: none;
-  color: white;
   list-style: none;
   padding: 0px;
 }
@@ -149,7 +148,6 @@
   text-decoration: none;
   font-size: larger;
   margin: 0px 20px;
-  color: black;
 }
 .imagewrapper{
   padding: 0px 0px 15px 0px;
