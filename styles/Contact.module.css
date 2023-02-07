@@ -1,5 +1,4 @@
 .container{
-    background-color: aliceblue;
     max-width: 45vw;
     margin: auto;
 }
@@ -21,7 +20,7 @@
     margin: 25px 0px 15px;
     height: 5rem;
     border: 1px solid black;
-    border-radius: 4px;
+    border-radius: 5px;
     font-size: 15px;
 }
 .dilasa{
