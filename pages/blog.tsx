@@ -3,14 +3,6 @@ import styles from "../styles/Blog.module.css";
 import Link from "next/link";
 import * as fs from "fs";
 import InfiniteScroll from "react-infinite-scroll-component";
-// import Home from ".";
-
-// Home.getInitialProps = async(context) => {
-//    const { req, query, res, asPath, pathname } = context;
-//    if (req) {
-//       let host = req.headers.host // will give you localhost:3000
-//      }
-//   }
 
 const Blog = (props: any, all_count: any) => {
   const [blogs, setBlogs] = useState(props.all_blogs);

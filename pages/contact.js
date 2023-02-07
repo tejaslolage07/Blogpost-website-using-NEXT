@@ -42,6 +42,12 @@ const Contact = () => {
     }
   };
 
+  function auto_grow() {
+    var text_box = document.getElementById("desc");
+    text_box.style.height = "20px";
+    text_box.style.height = (text_box.scrollHeight) + 60 + "px";
+  }
+
   return (
     <div className={styles.container}>
       <h1>Contact us</h1>
@@ -66,10 +72,9 @@ const Contact = () => {
           <div id="emailHelp" className={styles.dilasa}>
             Psst! We won&#x27;t share your phone/email with anyone else.
           </div>
-          {/* &#x27; is the character sequence for apostrophe or single quote (') */}
         </div>
         <div className={styles.mb3}>
-          <textarea className={styles.textarea} onChange={handleChange} value={desc} placeholder="Elaborate your concern" id="desc" name="desc" required ></textarea>
+          <textarea className={styles.textarea} onChange={handleChange} onInput={auto_grow} value={desc} placeholder="Elaborate your concern" id="desc" name="desc" required ></textarea>
         </div>
         <button type="submit" className={styles.btn}>
           Submit
